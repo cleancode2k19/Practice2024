@@ -1,0 +1,22 @@
+// Create a generator function with multiple yields
+function* generatorFunction() {
+  yield 'Neo'
+  yield 'Morpheus'
+  yield 'Trinity'
+
+  return 'The Oracle'
+}
+
+const generator = generatorFunction();
+
+// Call next four times
+const res1 = generator.next()
+console.log('first', res1.value);
+generator.next()
+generator.next()
+generator.next()
+
+output:
+first Neo
+{value: 'The Oracle', done: true}
+
